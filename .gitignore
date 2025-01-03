@@ -1,5 +1,6 @@
 Unused_Port\__checker.py
 __changer.py
+*_cache/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
