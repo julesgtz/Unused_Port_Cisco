@@ -1,0 +1,37 @@
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+lint.select = [
+    "E",    # Style errors
+    "W",    # Style warnings
+    "F",    # Flakes
+    "D",    # Pydocstyle
+    "I",    # Isort
+    "U",    # Pyupgrade
+    "C",    # Flake8 comprehensions
+    "B",    # Flake8 bugbear
+    "A001", # Flake8 builtins
+    "RUF",  # Ruff-specific rules
+]
+lint.ignore = [
+    "D100", # Missing docstring in public module
+    "D104", # Missing docstring in public package
+    "D107", # Missing docstring in __init__
+    "D203", # 1 blank line required before class docstring
+    "D205",
+    "D212", # Multi-line docstring summary should start at the first line
+    "D413", # Missing blank line after last section
+    "E501",
+    "W291",
+    "W191",
+    "W293"
+]
+lint.fixable = ["ALL"]
+exclude = [".venv", "exe", ".pyarmor"]
+
+[lint.per-file-ignores]
+"tests/*.py" = ["D", "S"]
+"setup.py" = ["D"]
+[tool.ruff.lint.pycodestyle]
+ignore-overlong-task-comments = true
+
